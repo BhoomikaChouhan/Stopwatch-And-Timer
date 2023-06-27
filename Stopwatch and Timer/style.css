@@ -1,0 +1,144 @@
+
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #0095ff;
+      --dark-color: #232323;
+      --light-color: #f1f1f1;
+      --text-color: #fff;
+      --highlight-color: #ff0000;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, var(--dark-color), var(--primary-color));
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: -webkit-fill-available;
+    }
+
+    h1 {
+      font-size: 49px;
+      margin: 0;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .stopwatch,
+    .timer {
+      margin-bottom: 50px;
+      width: 100%;
+      max-width: 500px;
+      background: linear-gradient(to bottom, var(--light-color), var(--primary-color));
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .stopwatch h2,
+    .timer h2 {
+      font-size: 32px;
+      padding: 20px;
+      margin: 0;
+      background: var(--primary-color);
+      color: var(--text-color);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .time {
+      font-size: 72px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .timer-input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      text-align: center;
+    }
+
+
+    .btn {
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 50%;
+      background: var(--secondary-color);
+      color: var(--text-color);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--highlight-color);
+    }
+
+    .btn:disabled {
+      background: #ccc;
+      color: var(--dark-color);
+      cursor: not-allowed;
+    }
+
+    .laps {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .lap {
+      margin-bottom: 5px;
+      font-size: 16px;
+      padding: 10px;
+      background: var(--primary-color);
+      color: var(--text-color);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .lap span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    @keyframes timer-finish-animation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .timer-finish-animation {
+      animation-name: timer-finish-animation;
+      animation-duration: 2s;
+      animation-iteration-count: 2;
+    }
